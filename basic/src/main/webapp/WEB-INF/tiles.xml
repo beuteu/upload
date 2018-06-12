@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+<!-- 	   <definition name="*.login" template="/WEB-INF/views/main/{1}.jsp">    
+        <put-attribute name="content" value=""/>  
+    </definition> --> 
+    <definition name="/login/*" template="/WEB-INF/views/login/{1}.jsp">    
+        <put-attribute name="content" value=""/>  
+    </definition> 
+
+    <!-- 20180531 이종열 -->
+    <definition name=".base" template="/WEB-INF/views/tiles/baseLayout.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/tiles/header.jsp" />
+<!--         <put-attribute name="left" value="/WEB-INF/views/tiles/left.jsp" />
+ -->        <put-attribute name="footer" value="/WEB-INF/views/tiles/footer.jsp" />
+    </definition>
+
+    <definition name="/board/*" extends=".base">      
+       <put-attribute name="body" value="/WEB-INF/views/board/{1}.jsp" />
+    </definition>
+
+   
+
+</tiles-definitions>
+
